@@ -27,7 +27,7 @@
 </nav>
 
 
-    <div style="margin-top:50px">asdHello</div>
+    <div>asdHello</div>
     
 <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
     <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b></p>
@@ -38,21 +38,6 @@
   </div>
 
 <script src="navbar/nav.js"></script>
-    <script>
-        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-        window.onscroll = function() {scrollFunction()};
-   
-        function scrollFunction() {
-          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("logo").style.height = "3.1rem";
-            document.getElementById("logo").style.width = "3.1rem";
 
-          } else {
-            document.getElementById("logo").style.height = "4.5rem";
-            document.getElementById("logo").style.width = "4.5rem";      
-          }
-        }
-        
-        </script>
 </body>
 </html>

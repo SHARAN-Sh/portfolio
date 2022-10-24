@@ -20,8 +20,8 @@ nav{
     margin-left: 10vw;
 }
 .logo img {
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 4.25rem;
+    width: 4.25rem;
     transition: 0.4s;
 }
 
@@ -31,14 +31,14 @@ nav{
     list-style: none; 
     width: 88vw;
     padding: 0 0.7vw;
-    justify-content:space-around;
+    justify-content:end;
     align-items: center;
     text-transform: uppercase;
     margin-right: 10vw;
 }
 .nav-links li a{
     text-decoration: none;
-    margin: 0 0.7vw;
+    margin: 0 3vw;
     color: white;
 }
 .nav-links li a:hover {
@@ -92,6 +92,8 @@ nav{
         -webkit-clip-path: circle(50px at 90% -10%);
         transition: all 1s ease-out;
         pointer-events: none;
+        justify-content:space-around;
+
     }
     .nav-links.open{
         clip-path: circle(1000px at 90% -10%);
