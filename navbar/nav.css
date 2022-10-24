@@ -29,7 +29,7 @@ nav{
     list-style: none; 
     width: 88vw;
     padding: 0 0.7vw;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     text-transform: uppercase;
     margin-right: 10vw;
@@ -45,6 +45,7 @@ nav{
 }
 .nav-links li {
     position: relative;
+    margin: 5vh 5vw;
 }
 .nav-links li a::before {
     content: "";

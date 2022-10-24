@@ -26,31 +26,49 @@
 html{    
     scroll-behavior: smooth;
 }
-body{ 
-    color: black;
-}
+
 img{
     display: block;
-    align-items: center;
 }
 .bimage{
-    background-image: url("cartoon.png");
-    display: inline-block;
     width:100%;
-    padding: 10px;
-}
-.typing_effect{
-    display: inline-block;
-    width: 40vw;
+    height: 100%
 }
 .container{
-    margin: 0 5vw;
+    z-index: 1;
+    margin: auto;
+    width: 90vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container1{
+
+display: flex;
+flex-direction: row-reverse;
+
 }
 .half_con{
     width: 50%;
-
+    padding: 0vh;
 }
 
+/*------For small Screen-----*/
+@media screen and (max-width: 800px){
+
+    .container1{
+        flex-direction: column;
+
+    }
+    .half_con{
+        width: 100%;
+    }
+    .half_ht{
+        height: 60vh;
+    }
+
+}
 
 
 
