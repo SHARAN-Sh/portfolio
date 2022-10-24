@@ -49,7 +49,7 @@ nav{
 .nav-links li a::before {
     content: "";
     display: block;
-    height: 1px;
+    height: 3px;
     width: 0%;
     background-color: #61DAFB;
     position: absolute;
