@@ -4,8 +4,8 @@ body{
 }
 nav{
     width: 100vw;
-    background-color: #CEAB93;
-    box-shadow: 0 3px 20px #E3CAA5;
+    background-color: #B6E388;
+    box-shadow: 0 3px 20px #FCFFB2;
     display: flex;
     position: -webkit-sticky;
     position: sticky;
@@ -39,10 +39,10 @@ nav{
 .nav-links li a{
     text-decoration: none;
     margin: 0 3vw;
-    color: white;
+    color: #FCFFB2;
 }
 .nav-links li a:hover {
-    color: #FFFBE9;
+    color: #C7F2A4;
 }
 .nav-links li {
     position: relative;
@@ -64,7 +64,7 @@ nav{
 /*Stying for small screens*/
 @media screen and (max-width: 800px){
     nav{
-        position: fixed;
+        position: sticky;
         z-index: 3;
     }
 
