@@ -4,22 +4,24 @@ body{
 }
 nav{
     width: 100vw;
-    background-color: #AD8B73;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    background-color: #CEAB93;
+    box-shadow: 0 3px 20px #E3CAA5;
     display: flex;
-    position: fixed;
-    z-index: 10;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;    z-index: 10;
 
 }
 
 /*Styling logo*/
 .logo{
-    padding:2vh 2vw;
+    padding:1.5vh 1.5vw;
     text-align: center;
+    margin-left: 10vw;
 }
 .logo img {
-    height: 5rem;
-    width: 5rem;
+    height: 4.5rem;
+    width: 4.5rem;
     transition: 0.4s;
 }
 
@@ -32,14 +34,15 @@ nav{
     justify-content:space-around;
     align-items: center;
     text-transform: uppercase;
+    margin-right: 10vw;
 }
 .nav-links li a{
     text-decoration: none;
     margin: 0 0.7vw;
-    color: #FFFBE9;
+    color: white;
 }
 .nav-links li a:hover {
-    color: #E3CAA5;
+    color: #FFFBE9;
 }
 .nav-links li {
     position: relative;
@@ -64,6 +67,11 @@ nav{
         position: fixed;
         z-index: 3;
     }
+
+    .logo{
+        margin-left: 5vw;
+    }
+
     .hamburger{
         display:block;
         position: absolute;
