@@ -21,14 +21,34 @@
     font-family: 'GFS Didot',neuzeit-grotesk,sans-serif;
     line-height: normal;
     letter-spacing: 1px;
-    font-weight: 300;
-    color: #28282B;
+    color: black;
 }
 html{    
     scroll-behavior: smooth;
 }
 body{ 
     color: black;
+}
+img{
+    display: block;
+    align-items: center;
+}
+.bimage{
+    background-image: url("cartoon.png");
+    display: inline-block;
+    width:100%;
+    padding: 10px;
+}
+.typing_effect{
+    display: inline-block;
+    width: 40vw;
+}
+.container{
+    margin: 0 5vw;
+}
+.half_con{
+    width: 50%;
+
 }
 
 

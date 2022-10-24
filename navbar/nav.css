@@ -1,28 +1,26 @@
-
 body{
     overflow-x: hidden;
 }
 nav{
+    height: 4rem;
     width: 100vw;
-    background-color: #B6E388;
-    box-shadow: 0 3px 20px #FCFFB2;
+    background-color: transparent;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     display: flex;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;    z-index: 10;
-
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 /*Styling logo*/
 .logo{
-    padding:1.5vh 1.5vw;
+    padding:1vh 1vw;
     text-align: center;
     margin-left: 10vw;
 }
 .logo img {
-    height: 4.25rem;
-    width: 4.25rem;
-    transition: 0.4s;
+    height: 3rem;
+    width: 3rem;
 }
 
 /*Styling Links*/
@@ -31,21 +29,36 @@ nav{
     list-style: none; 
     width: 88vw;
     padding: 0 0.7vw;
-    justify-content:end;
+    justify-content: space-evenly;
     align-items: center;
     text-transform: uppercase;
     margin-right: 10vw;
 }
 .nav-links li a{
     text-decoration: none;
-    margin: 0 3vw;
-    color: #FCFFB2;
+    margin: 0 0.7vw;
+    color: #171717;
+
 }
 .nav-links li a:hover {
-    color: #C7F2A4;
+    color: #61DAFB;
 }
 .nav-links li {
     position: relative;
+}
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    bottom: 0;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+    width: 80%;
 }
 
 
@@ -53,7 +66,7 @@ nav{
 .hamburger div{
     width: 30px;
     height:3px;
-    background: #f2f5f7;
+    background: #171717;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -64,14 +77,12 @@ nav{
 /*Stying for small screens*/
 @media screen and (max-width: 800px){
     nav{
-        position: sticky;
+        position: fixed;
         z-index: 3;
     }
-
     .logo{
-        margin-left: 5vw;
+        margin-left: 3vw;
     }
-
     .hamburger{
         display:block;
         position: absolute;
@@ -84,7 +95,7 @@ nav{
     }
     .nav-links{
         position: fixed;
-        background: #131418;
+        background: #F2F2F2;
         height: 100vh;
         width: 100%;
         flex-direction: column;
@@ -92,8 +103,6 @@ nav{
         -webkit-clip-path: circle(50px at 90% -10%);
         transition: all 1s ease-out;
         pointer-events: none;
-        justify-content:space-around;
-
     }
     .nav-links.open{
         clip-path: circle(1000px at 90% -10%);
@@ -129,10 +138,6 @@ nav{
     li.fade{
         opacity: 1;
     }
-    .nav-links li a{
-        color: aliceblue;
-    }
-
 }
 /*Animating Hamburger Icon on Click*/
 .toggle .line1{
