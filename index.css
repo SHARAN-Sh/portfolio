@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
 /* For responsive */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -21,26 +25,29 @@
     font-family: 'GFS Didot',neuzeit-grotesk,sans-serif;
     line-height: normal;
     letter-spacing: 1px;
-    color: black;
+    color: #191919;
 }
 html{    
     scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', Helvetica,Arial,sans-serif;
 }
 
 img{
     display: block;
 }
 .bimage{
+    background-image: url("cartoon.png");
     width:100%;
     height: 100%
 }
 .container{
     z-index: 1;
-    margin: auto;
-    width: 90vw;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .container1{
@@ -51,8 +58,58 @@ flex-direction: row-reverse;
 }
 .half_con{
     width: 50%;
-    padding: 0vh;
+    padding: 8px;
 }
+.word_down{
+    font-size: 5.5rem;
+    font-weight: 600;
+    color: #3293AD;
+    text-align:center;
+}
+.half_ht{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*-----Typing Effect----*/
+
+
+
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.container p span.typed-text {
+    font-size: 2.5rem;
+  font-weight: normal;
+  color: #dd7732;
+}
+.container p span.cursor {
+  display: inline-block;
+  font-size: 2.5rem;
+  background-color: #191919;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #191919; }
+  49% { background-color: #191919; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #191919; }
+}
+
+
 
 /*------For small Screen-----*/
 @media screen and (max-width: 800px){
@@ -67,8 +124,16 @@ flex-direction: row-reverse;
     .half_ht{
         height: 100vh;
     }
-
+    .word_down{
+        font-size: 4rem;
+    }
+    .container p {
+        font-size: 2.5rem;
+    }
+    .container p span.typed-text {
+        font-size: 2rem;
 }
 
+}
 
 
