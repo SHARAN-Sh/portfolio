@@ -56,17 +56,16 @@ display: flex;
 flex-direction: row-reverse;
 
 }
-.half_con{
+.halfcon{
     width: 50%;
-    padding: 8px;
 }
-.word_down{
+.worddown{
     font-size: 5.5rem;
     font-weight: 600;
     color: #3293AD;
     text-align:center;
 }
-.half_ht{
+.halfht{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,13 +117,13 @@ flex-direction: row-reverse;
         flex-direction: column;
 
     }
-    .half_con{
+    .halfcon{
         width: 100%;
     }
-    .half_ht{
+    .halfht{
         height: 100vh;
     }
-    .word_down{
+    .worddown{
         font-size: 4rem;
     }
     .container p {
