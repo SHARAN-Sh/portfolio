@@ -52,7 +52,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 html {
@@ -61,7 +60,7 @@ html {
 
 body {
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 17px;
     line-height: normal;
     letter-spacing: 1px;
@@ -98,7 +97,7 @@ img {
 
 .worddown {
     font-size: 5.5rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #296c92;
     text-align: center;
 }
@@ -109,6 +108,55 @@ img {
     justify-content: center;
 }
 
+.cont1 {
+    margin: 20vh 0 0;
+    height: 70vh;
+    background-color: black;
+    text-align: center;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    opacity: 0.4;
+
+}
+
+.hero-h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1vh;
+}
+
+.hero-text {
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.cont2 {
+    margin: 20vh auto;
+    border-radius: 25px;
+    min-height: 200px;
+    max-width: 700px;
+    background-color:#FFFAFA;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.fewword {
+    padding: 3vh 2vw;
+    text-align: justify;
+
+}
+.fewword p{
+    font-size: 1.1rem;
+    padding: 3vh 2vw;
+}
 
 /*-----Typing Effect----*/
 
@@ -181,9 +229,11 @@ img {
     .halfht {
         height: 100vh;
     }
-    .halfht2{
+
+    .halfht2 {
         height: 80vh;
     }
+
     .worddown {
         font-size: 4rem;
     }
@@ -196,10 +246,24 @@ img {
         font-size: 2rem;
     }
 
-    .bimage{
-        object-fit:cover;
+    .bimage {
+        object-fit: cover;
         object-position: 50% 100%;
 
     }
+
+    .cont1 {
+        margin: 20vh 0 0;
+    }
+
+    .hero-h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1vh;
+    }
+    .cont2 {
+        margin: 20vh 5vw;
+    }
+
+
 
 }
