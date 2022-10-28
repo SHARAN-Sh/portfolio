@@ -2,8 +2,8 @@ const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 
-hamburger.addEventListener('click', () => {
-    //Animate Links
+function hamtog() {
+         //Animate Links
     navLinks.classList.toggle("open");
     links.forEach(link => {
         link.classList.toggle("fade");
@@ -11,5 +11,10 @@ hamburger.addEventListener('click', () => {
 
     //Hamburger Animation
     hamburger.classList.toggle("toggle");
-});
+}
+
+hamburger.addEventListener('click',hamtog);
+
+navLinks.addEventListener('click', hamtog);
+
 
