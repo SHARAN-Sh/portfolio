@@ -59,7 +59,7 @@ html {
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Recoleta,Georgia,"Times New Roman",Times,serif;
     font-weight: 400;
     font-size: 17px;
     line-height: normal;
@@ -156,7 +156,7 @@ img {
 
 }
 .fewword p{
-    padding: 3vh 2vw;
+    padding: 7px 0;
 }
 /*----------Comment Form-------------*/
 .wrapper {
