@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="navbar/nav.css">
   <link rel="stylesheet" href="particlejs/particle.css">
   <link rel="icon" type="image/x-icon" href="logo.svg">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -22,7 +21,7 @@
   <!-- backgroud particles.js container -->
 
 
-  <nav>
+  <nav id="navbar">
     <div class="logo">
       <a href="/"><img src="logo.svg" alt="Logo Image"></a>
     </div>
@@ -42,8 +41,7 @@
       <div class="halfcon halfht">
         <div>
           <h1 class="worddown">HELLO!</h1><br>
-          <p class="animate__animated animate__bounceInDown animate__delay-.5s">I'm <span
-              class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+          <p>I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
         </div>
       </div>
       <div class="halfcon halfht2"><img src="cartoon.png" class="bimage"></div>
@@ -89,9 +87,14 @@
 
     </div>
   </div>
-<div>
-  <img src="/footer.png" class="footer" id="contact">
-</div>
+  <div class="footer">
+    <img src="/footer.png" class="footerimg" id="contact">
+    <div class="slink">
+    <a href="https://www.linkedin.com/in/sharan-shakya-2a991a253/" class="fa fa-linkedin fa-2x"></a>
+    <a href="https://www.facebook.com/sharan.shakya.988" class="fa fa-facebook fa-2x"></a>
+    <a href="#" class="fa fa-instagram fa-2x"></a>
+  </div>
+  </div>
 
 
 
@@ -102,7 +105,7 @@
 
   <script src="navbar/nav.js"></script>
   <script src="particlejs/particle.js"></script>
-  <script src="/typing.js"></script>
+  <script src="/t.js"></script>
 
   <!--Firebase-->
 
@@ -171,7 +174,7 @@
             messageRef.style.visibility = "visible";
           } catch (err) {
             messageRef.innerHTML = "Submissio Failed"
-            messageRef.style.visibility = "visible";          
+            messageRef.style.visibility = "visible";
           }
           e.preventDefault();
           document.getElementById("username").value = "";
@@ -180,14 +183,14 @@
           messageRef.style.visibility = "visible";
           count = 1;
         }
-        else{
-        messageRef.innerHTML = "You want to enter twice huh"
-        messageRef.style.visibility = "visible"; 
+        else {
+          messageRef.innerHTML = "You want to enter twice huh"
+          messageRef.style.visibility = "visible";
         }
       }
       else {
         messageRef.innerHTML = "Empty Field"
-        messageRef.style.visibility = "visible";          
+        messageRef.style.visibility = "visible";
       }
     });
 
