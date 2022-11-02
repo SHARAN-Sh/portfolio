@@ -42,7 +42,7 @@ nav{
 
 }
 .nav-links li a:hover {
-    color: #007ba7;
+    color: #007BA7;
 }
 .nav-links li {
     position: relative;
@@ -53,7 +53,7 @@ nav{
     display: block;
     height: 3px;
     width: 0%;
-    background-color: #007ba7;
+    background-color: #007BA7;
     position: absolute;
     bottom: 0;
     transition: all ease-in-out 250ms;

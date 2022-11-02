@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
 
   <title>Sharan Shakya</title>
@@ -35,7 +34,7 @@
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#footer">Contact</a></li>
     </ul>
   </nav>
   <div class="container">
@@ -50,7 +49,7 @@
       <div class="halfcon halfht2"><img src="cartoon.png" class="bimage"></div>
     </div>
   </div>
-  <div  id="about" style="height: 0px;"></div>
+  <div id="about" style="height: 0px;"></div>
 
   <div class="cont1">
     <img src="/image1.jpg" class="hero-image">
@@ -60,18 +59,39 @@
     </div>
   </div>
 
-  <div class="cont2">
-    <div class="fewword">
-      <h1 style="text-align:center;">Few word</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique officia minima deserunt praesentium est, rem accusantium quisquam debitis aliquid tenetur vel libero iste, hic facere officiis eum? Optio, ad!
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis doloremque facilis magnam aliquam omnis dolore sed non vero ipsum aliquid, eaque quas. Nihil quod ratione vitae eius. Explicabo, reiciendis? Consectetur!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus distinctio praesentium, voluptatem, asperiores dolorem inventore esse numquam odio fugit magni soluta obcaecati reprehenderit? Aperiam incidunt repudiandae doloremque animi assumenda reprehenderit.
-      </p>
+  <div class="mcont">
+    <div class="cont2">
+      <div class="fewword">
+        <h3 style="text-align:center; padding-top: 2rem;">Comments</h3>
+        <p>
+          No Comments yet.
+        </p>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="containerf">
+        <h3 style="text-align:center; padding: 2rem 0 1rem;">Leave a Comment</h3>
+        <textarea id="userCmnt" placeholder="Write your comment here." id="textfield" required></textarea>
+        <input type="email" placeholder="Email (Optional)" id="useremail" autocomplete="off" />
+        <input type="text" placeholder="Name" id="username" autocomplete="off" required />
+
+        <button id="submit">Submit</button>
+        <p id="message-ref"></p>
+
+        <!--
+        <ul class="instructions">
+        <li>Enter email address</li>
+      </ul>
+    -->
+
+      </div>
+
     </div>
   </div>
-  <div style="padding-bottom: 1000px;">hello im under the water</div>
-
+<div>
+  <img src="/footer.png" class="footer" id="footer">
+</div>
 
 
 
@@ -84,7 +104,94 @@
   <script src="particlejs/particle.js"></script>
   <script src="/typing.js"></script>
 
+  <!--Firebase-->
 
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDs4AkdjOiHIBs-JM60m8bfM_MmTyYeDIo",
+      authDomain: "comments-49b1d.firebaseapp.com",
+      databaseURL: "https://comments-49b1d-default-rtdb.firebaseio.com",
+      projectId: "comments-49b1d",
+      storageBucket: "comments-49b1d.appspot.com",
+      messagingSenderId: "21105655154",
+      appId: "1:21105655154:web:bf879b3d6b1ea61c8eb1eb",
+      measurementId: "G-LWJBG18EDX"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    //const db= firebase.firestore();
+    //const db= app.firestore();
+    const db = getFirestore(app);
+
+    let count = 0;
+
+    //------------------------//
+    //----------FormJs--------//
+    //-----------------------//
+
+    let submitBtn = document.getElementById("submit");
+
+    submit.addEventListener('click', (e) => {
+      let messageRef = document.getElementById("message-ref");
+      let username = document.getElementById("username").value;
+      let useremail = document.getElementById("useremail").value;
+      let usercomment = document.getElementById("userCmnt").value;
+
+
+
+      /*db.collection("comments").add({
+          name: username,
+          comment: usercomment,
+          email: useremail
+      })*/
+
+      if (((username && usercomment) != "")) {
+        if (count == 0) {
+          try {
+            const docRef = addDoc(collection(db, "comments"), {
+              name: username,
+              comment: usercomment,
+              email: useremail
+            });
+            messageRef.innerHTML = "Submitted"
+            messageRef.style.visibility = "visible";
+          } catch (err) {
+            messageRef.innerHTML = "Submissio Failed"
+            messageRef.style.visibility = "visible";          
+          }
+          e.preventDefault();
+          document.getElementById("username").value = "";
+          document.getElementById("useremail").value = "";
+          document.getElementById("userCmnt").value = "";
+          messageRef.style.visibility = "visible";
+          count = 1;
+        }
+        else{
+        messageRef.innerHTML = "You want to enter twice huh"
+        messageRef.style.visibility = "visible"; 
+        }
+      }
+      else {
+        messageRef.innerHTML = "Empty Field"
+        messageRef.style.visibility = "visible";          
+      }
+    });
+
+  </script>
 </body>
 
 </html>
