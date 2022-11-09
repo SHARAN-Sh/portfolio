@@ -48,7 +48,6 @@ window.onscroll = function () {
   var y = window.matchMedia("(min-width: 700px)")
   if (y.matches) { // If media query matches
     var currentScrollPos = window.pageYOffset;
-    console.log(currentScrollPos);
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("navbar").style.top = "0";
     } else {
