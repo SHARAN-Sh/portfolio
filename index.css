@@ -294,7 +294,7 @@ input {
 
     body {
         font-weight: 300;
-        font-size: 17px;
+        font-size: .8em;
     }
     .container1 {
         flex-direction: column;
