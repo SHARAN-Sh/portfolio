@@ -310,7 +310,8 @@ input {
     }
 
     .halfht2 {
-        height: 80vh;
+        height: 70vh;
+        padding: 20px;
     }
 
     .worddown {
