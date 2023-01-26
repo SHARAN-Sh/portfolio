@@ -409,7 +409,7 @@ input {
   
   .wavecontent {
     position:relative;
-    height:30vh;
+    height:20vh;
     text-align:center;
     background-color: #0480a8;
     t
@@ -447,11 +447,11 @@ input {
   /*Shrinking for mobile*/
   @media (max-width: 768px) {
     .waves {
-      height:50x;
+      height:40px;
       min-height:40px;
     }
     .wavecontent {
-      height:30vh;
+      height:20vh;
     }
   
   }
