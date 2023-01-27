@@ -96,7 +96,7 @@ img {
 }
 
 .worddown {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     font-weight: 500;
     color: #296C92;
     text-align: center;
@@ -109,7 +109,7 @@ img {
 }
 
 .cont1 {
-    margin: 20vh 0 0;
+    margin: 30vh 0 20vh;
     height: 70vh;
     background-color: black;
     text-align: center;
@@ -125,7 +125,7 @@ img {
 }
 
 .hero-h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1vh;
 }
@@ -288,75 +288,6 @@ input {
 }
 
 
-
-/*------For small Screen-----*/
-@media screen and (max-width: 800px) {
-
-    body {
-        font-weight: 300;
-        font-size: .8em;
-    }
-    .container1 {
-        flex-direction: column;
-
-    }
-
-    .halfcon {
-        width: 100%;
-    }
-
-    .halfht {
-        height: 100vh;
-    }
-
-    .halfht2 {
-        height: 70vh;
-    }
-
-    .worddown {
-        font-size: 4rem;
-    }
-
-    .container p {
-        font-size: 2.5rem;
-    }
-
-    .container p span.typed-text {
-        font-size: 2rem;
-    }
-
-    .bimage {
-        object-fit: cover;
-        object-position: 50% 100%;
-
-    }
-
-    .cont1 {
-        margin: 20vh 0 0;
-    }
-
-    .hero-h1 {
-        font-size: 2.2rem;
-        margin-bottom: 1vh;
-    }
-    .cont2 {
-        margin: 4rem auto;
-        padding: 0 7vw;
-
-    }
-    .wrapper {
-        margin: 0 auto 4rem ;
-        padding: 0 5rem;
-
-    }
-    .mcont{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-
-}
 /*-----icon-----*/
 
 
@@ -368,12 +299,12 @@ input {
     transition: 0.4s ease-out;
 
   }  
-  .fa-facebook {  
+  .fa-facebook-f {  
     color: white;  
   }  
 
 
-  .fa-linkedin {  
+  .fa-linkedin-in {  
     color: white;  
   }  
   .fa-instagram {  
@@ -385,7 +316,6 @@ input {
     transform: rotate(360deg);
     transition: 0.4s ease-in-out;
 }
-
 
 
 /*---wave*---*/
@@ -412,7 +342,35 @@ input {
     height:20vh;
     text-align:center;
     background-color: #0480a8;
-    t
+    
+  }
+
+  .threetile{
+    margin: 20vh 0;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:#F8F4EA;
+
+  }
+  .fa1{
+    font-size: 70px;  
+    margin: 0 8vw;
+    color: #579BB1;
+
+  }
+  .card{
+    display: flex;
+    flex-direction: column;    
+  }
+  .cardtext{
+    margin-top: 10px;
+    color: #579BB1;
+    font-size: 1.2rem;
+    font-weight: 600;
+
   }
   
   /* Animation */
@@ -447,7 +405,7 @@ input {
   /*Shrinking for mobile*/
   @media (max-width: 768px) {
     .waves {
-      height:40px;
+      height:45px;
       min-height:40px;
     }
     .wavecontent {
@@ -455,3 +413,86 @@ input {
     }
   
   }
+
+  
+
+
+/*------For small Screen-----*/
+@media screen and (max-width: 800px) {
+
+    body {
+        font-weight: 300;
+        font-size: .8em;
+    }
+    .container1 {
+        flex-direction: column;
+
+    }
+
+    .halfcon {
+        width: 100%;
+    }
+
+    .halfht {
+        height: 100vh;
+    }
+
+    .halfht2 {
+        height: 70vh;
+    }
+
+    .worddown {
+        font-size: 3rem;
+    }
+
+    .container p {
+        font-size: 2.5rem;
+    }
+
+    .container p span.typed-text {
+        font-size: 2rem;
+    }
+
+    .bimage {
+        object-fit: cover;
+        object-position: 50% 100%;
+
+    }
+
+    .cont1 {
+        margin: 20vh 0 0;
+    }
+
+    .hero-h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1vh;
+    }
+    .cont2 {
+        margin: 4rem auto;
+        padding: 0 7vw;
+
+    }
+    .wrapper {
+        margin: 0 auto 4rem ;
+        padding: 0 5rem;
+
+    }
+    .mcont{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    .cardtext{
+        font-size: 1rem;
+        font-weight: 600;
+    
+      }
+    .fa1{
+        font-size: 50px;  
+        margin: 0 10vw;
+        color: #579BB1;
+    
+      }
+
+}
